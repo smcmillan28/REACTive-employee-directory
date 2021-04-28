@@ -33,7 +33,7 @@ class App extends Component {
               <tbody>
                 <tr>
                   <th scope="row">{employee.dob.age}</th>
-                  <td><img src={employee.picture.thumbnail}></img></td>
+                  <td><img src={employee.picture.thumbnail} alt="employee"></img></td>
                   <td>{employee.name.first}</td>
                   <td>{employee.name.last}</td>
                   <td>{employee.email}</td>
