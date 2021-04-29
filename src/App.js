@@ -11,8 +11,12 @@ const sortUp = <FontAwesomeIcon icon={faSortAmountUpAlt} />
 const styles = {
   buttonStyle: {
     borderRadius: "10px",
-    background: "grey", 
+    background: "grey",
     color: "white"
+  },
+  formStyle: {
+    width: "90%",
+    margin: "10px"
   }
 }
 
@@ -31,10 +35,17 @@ class App extends Component {
     this.setState({ employeesUp });
   }
 
+  filterName = () => {
+    const nameFilter = this.state.employees.filter(emp => emp.name.last.includes("x"));
+    this.setState({ nameFilter });
+  }
+
   render() {
     return (
       <div>
-        <Nav />
+        <Nav 
+          filterName={this.filterName}
+        />
         <Jumbo />
         <div>
           <table className="table table-dark table-hover">
