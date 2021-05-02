@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import Nav from "./components/Nav.js";
+import React, { Component, } from "react";
 import Jumbo from "./components/Jumbo.js";
 import employees from "./employees.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,30 +21,38 @@ const styles = {
 
 class App extends Component {
   state = {
-    employees
+    employees,
+    search: ""
   };
 
   sortAgeDown = () => {
     const employeesDown = this.state.employees.sort((a, b) => (a.dob.age > b.dob.age) ? 1 : -1);
-    this.setState({ employeesDown });
+    this.setState({ ...this.state, employeesDown });
   }
 
   sortAgeUp = () => {
     const employeesUp = this.state.employees.sort((a, b) => (b.dob.age > a.dob.age) ? 1 : -1);
-    this.setState({ employeesUp });
+    this.setState({ ...this.state, employeesUp });
   }
 
-  filterName = () => {
-    const nameFilter = this.state.employees.filter(emp => emp.name.last.includes("x"));
-    this.setState({ nameFilter });
+  handleInputChange = (e) => {
+    e.preventDefault();
+    const value = e.target.value;
+    const filterNames = this.state.employees.filter(employee => employee.name.last.includes(value) ? 1 : -1);
+    this.setState({ ...this.state, filterNames });
   }
 
   render() {
     return (
       <div>
-        <Nav 
-          filterName={this.filterName}
-        />
+        <nav className="navbar navbar-dark bg-dark">
+          <div className="container-fluid">
+            <p className="navbar-brand">GoGo Gadgets - Employee Directory</p>
+            <form className="d-flex">
+              <input className="form-control me-4" type="search" placeholder="Type Last Name Here" onChange={this.handleInputChange} />
+            </form>
+          </div>
+        </nav>
         <Jumbo />
         <div>
           <table className="table table-dark table-hover">
