@@ -28,19 +28,16 @@ class App extends Component {
   sortAgeDown = () => {
     const employeesDown = this.state.employees.sort((a, b) => (a.dob.age > b.dob.age) ? 1 : -1);
     this.setState({ ...this.state, employeesDown });
-  }
+  };
 
   sortAgeUp = () => {
     const employeesUp = this.state.employees.sort((a, b) => (b.dob.age > a.dob.age) ? 1 : -1);
     this.setState({ ...this.state, employeesUp });
-  }
+  };
 
-  handleInputChange = (e) => {
-    e.preventDefault();
-    const value = e.target.value;
-    const filterNames = this.state.employees.filter(employee => employee.name.last.includes(value) ? 1 : -1);
-    this.setState({ ...this.state, filterNames });
-  }
+  handleInputChange = event => {
+    this.setState({ search: event.target.value });
+  };
 
   render() {
     return (
@@ -49,7 +46,7 @@ class App extends Component {
           <div className="container-fluid">
             <p className="navbar-brand">GoGo Gadgets - Employee Directory</p>
             <form className="d-flex">
-              <input className="form-control me-4" type="search" placeholder="Type Last Name Here" onChange={this.handleInputChange} />
+              <input className="form-control me-4" type="search" placeholder="Type Last Name Here" onChange={this.handleInputChange} value={this.value} />
             </form>
           </div>
         </nav>
@@ -66,7 +63,7 @@ class App extends Component {
                 <th scope="col">Email</th>
               </tr>
             </thead>
-            {this.state.employees.map(employee => (
+            {employees.filter(emp => emp.name.last.toLowerCase().includes(this.state.search)).map(employee => (
               <tbody key={employee.login.username}>
                 <tr>
                   <td>{employee.login.username}</td>
