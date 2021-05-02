@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/REACTive-employee-directory/static/js/main.2c204bf1.chunk.js",
-    "main.js.map": "/REACTive-employee-directory/static/js/main.2c204bf1.chunk.js.map",
+    "main.js": "/REACTive-employee-directory/static/js/main.3fad2478.chunk.js",
+    "main.js.map": "/REACTive-employee-directory/static/js/main.3fad2478.chunk.js.map",
     "runtime-main.js": "/REACTive-employee-directory/static/js/runtime-main.54ba358b.js",
     "runtime-main.js.map": "/REACTive-employee-directory/static/js/runtime-main.54ba358b.js.map",
     "static/css/2.19ef47df.chunk.css": "/REACTive-employee-directory/static/css/2.19ef47df.chunk.css",
-    "static/js/2.7a78fc9a.chunk.js": "/REACTive-employee-directory/static/js/2.7a78fc9a.chunk.js",
-    "static/js/2.7a78fc9a.chunk.js.map": "/REACTive-employee-directory/static/js/2.7a78fc9a.chunk.js.map",
+    "static/js/2.d7134da8.chunk.js": "/REACTive-employee-directory/static/js/2.d7134da8.chunk.js",
+    "static/js/2.d7134da8.chunk.js.map": "/REACTive-employee-directory/static/js/2.d7134da8.chunk.js.map",
     "index.html": "/REACTive-employee-directory/index.html",
     "static/css/2.19ef47df.chunk.css.map": "/REACTive-employee-directory/static/css/2.19ef47df.chunk.css.map",
-    "static/js/2.7a78fc9a.chunk.js.LICENSE.txt": "/REACTive-employee-directory/static/js/2.7a78fc9a.chunk.js.LICENSE.txt",
+    "static/js/2.d7134da8.chunk.js.LICENSE.txt": "/REACTive-employee-directory/static/js/2.d7134da8.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/REACTive-employee-directory/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.54ba358b.js",
     "static/css/2.19ef47df.chunk.css",
-    "static/js/2.7a78fc9a.chunk.js",
-    "static/js/main.2c204bf1.chunk.js"
+    "static/js/2.d7134da8.chunk.js",
+    "static/js/main.3fad2478.chunk.js"
   ]
 }
